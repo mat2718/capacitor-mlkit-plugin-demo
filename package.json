@@ -11,7 +11,8 @@
     "test:ci": "ng test --watch=false --progress=false --code-coverage --browsers=HeadlessChrome",
     "lint": "ng lint && npm run prettier -- --check",
     "fmt": "ng lint --fix && npm run prettier -- --write",
-    "prettier": "prettier \"{src,e2e/src}/**/*.{css,scss,html,ts,js}\""
+    "prettier": "prettier \"{src,e2e/src}/**/*.{css,scss,html,ts,js}\"",
+    "android": "yarn add @mat2718/capacitor-face-detection && yarn ionic cap sync android && yarn ionic cap run android"
   },
   "private": true,
   "dependencies": {
@@ -35,6 +36,7 @@
     "@capacitor/status-bar": "5.0.6",
     "@capawesome/capacitor-file-picker": "5.1.1",
     "@ionic/angular": "6.2.9",
+    "@mat2718/capacitor-face-detection": "0.0.7",
     "rxjs": "7.5.7",
     "tslib": "2.4.0",
     "zone.js": "0.11.8"

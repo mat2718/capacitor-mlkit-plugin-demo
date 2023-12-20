@@ -38,5 +38,9 @@
 	{
 		"pkg": "@capawesome/capacitor-file-picker",
 		"classpath": "io.capawesome.capacitorjs.plugins.filepicker.FilePickerPlugin"
+	},
+	{
+		"pkg": "@mat2718/capacitor-face-detection",
+		"classpath": "com.facedetection.FaceDetectionPlugin"
 	}
 ]

@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'face-detection',
     pathMatch: 'full',
   },
   {
@@ -26,30 +26,30 @@ const routes: Routes = [
         (m) => m.FaceDetectionModule
       ),
   },
-  {
-    path: 'face-mesh-detection',
-    loadChildren: () =>
-      import('./modules/face-mesh-detection/face-mesh-detection.module').then(
-        (m) => m.FaceMeshDetectionModule
-      ),
-  },
-  {
-    path: 'selfie-segmentation',
-    loadChildren: () =>
-      import('./modules/selfie-segmentation/selfie-segmentation.module').then(
-        (m) => m.SelfieSegmentationModule
-      ),
-  },
-  {
-    path: 'translation',
-    loadChildren: () =>
-      import('./modules/translation/translation.module').then(
-        (m) => m.TranslationModule
-      ),
-  },
+  // {
+  //   path: 'face-mesh-detection',
+  //   loadChildren: () =>
+  //     import('./modules/face-mesh-detection/face-mesh-detection.module').then(
+  //       (m) => m.FaceMeshDetectionModule
+  //     ),
+  // },
+  // {
+  //   path: 'selfie-segmentation',
+  //   loadChildren: () =>
+  //     import('./modules/selfie-segmentation/selfie-segmentation.module').then(
+  //       (m) => m.SelfieSegmentationModule
+  //     ),
+  // },
+  // {
+  //   path: 'translation',
+  //   loadChildren: () =>
+  //     import('./modules/translation/translation.module').then(
+  //       (m) => m.TranslationModule
+  //     ),
+  // },
   {
     path: '**',
-    redirectTo: 'home',
+    redirectTo: 'face-detection',
   },
 ];
 

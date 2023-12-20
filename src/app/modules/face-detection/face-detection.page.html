@@ -94,10 +94,44 @@
           ></ion-range>
         </ion-item>
         <ion-item>
+          <ion-label position="fixed">Lens Facing</ion-label>
+          <ion-select formControlName="lensFacing">
+            <ion-select-option [value]="lensFacing.Front"
+              >Front</ion-select-option
+            >
+            <ion-select-option [value]="lensFacing.Back"
+              >Back</ion-select-option
+            >
+          </ion-select>
+        </ion-item>
+        <ion-item>
           <ion-label position="fixed">Face Tracking</ion-label>
           <ion-checkbox formControlName="enableTracking"></ion-checkbox>
         </ion-item>
-        <ion-button (click)="processImage()">Process Image</ion-button>
+        <ion-button
+          expand="block"
+          (click)="startActiveScan()"
+          [disabled]="!isSupported"
+          >Start Active Scan</ion-button
+        >
+        <ion-button
+          expand="block"
+          (click)="readFaceFromImage()"
+          [disabled]="!isSupported"
+          >Read Faces From Image</ion-button
+        >
+        <ion-button
+          expand="block"
+          (click)="openSettings()"
+          [disabled]="!isSupported"
+          >Open Settings</ion-button
+        >
+        <ion-button
+          expand="block"
+          (click)="requestPermissions()"
+          [disabled]="isPermissionGranted"
+          >Request Permissions</ion-button
+        >
       </form>
     </ion-card-content>
   </ion-card>

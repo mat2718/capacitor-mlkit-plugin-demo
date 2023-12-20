@@ -15,18 +15,6 @@ export class HomePage {
       name: 'Face Detection',
       url: '/face-detection',
     },
-    {
-      name: 'Face Mesh Detection',
-      url: '/face-mesh-detection',
-    },
-    {
-      name: 'Selfie Segmentation',
-      url: '/selfie-segmentation',
-    },
-    {
-      name: 'Translation',
-      url: '/translation',
-    },
   ];
 
   constructor() {}

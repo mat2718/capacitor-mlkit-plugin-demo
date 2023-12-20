@@ -254,3 +254,24 @@ body.barcode-scanning-active {
     --ion-background-color: transparent;
   }
 }
+
+/**
+  * face Scanning
+  * -------------------------------------------
+  */
+body.face-scanning-active {
+  visibility: hidden;
+  --background: transparent;
+  --ion-background-color: transparent;
+}
+
+.face-scanning-modal {
+  visibility: visible;
+}
+
+@media (prefers-color-scheme: dark) {
+  .face-scanning-modal {
+    --background: transparent;
+    --ion-background-color: transparent;
+  }
+}
